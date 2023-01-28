@@ -1,30 +1,80 @@
-const express = require('express');
-const path = require('path’); 
-const methodOverride = require('method-override’);  
-const session = require('express-session’);
-const ErrorMiddleware = require('./middlewares/ErrorMiddleware’);
-const productosRoutes = require('./routes/productosRoutes’);  // Enrutador
+const express = require("express");
+const path = require("path");
+const methodOverride = require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const cors = require('cors');
+
+const {sequelize} = require ('./src/database/models') 
+sequelize.sync({alter:false}).then(()=> console.log ('modelossincronizados'));
+
+const userLoggedMiddleware = require('./Middlewares/userLoggedMiddleware');
+//const logger = require('morgan');
+const createError = require('http-errors');
+
+//express//
 
 const app = express();
 
-app.set('view engine', 'ejs')   // Seteo el motor de plantillas ejs
+//const methodOverride = require('method-override');
 
-app.set('views', 'rutaCarpetaVistas’)  // Opcional. Solamente si quiero cambiar mi carpeta views
+//middleware//
+app.use( express.static(path.join(__dirname, '../public')));  
 
-app.use(ErrorMiddleware);   // Opcional. Aplicar middleware a nivel aplicación
+app.use(cors());  
+app.use(express.json());
+app.use(cookies());
+app.use(methodOverride ("_method")); //Procesamiento PUT y DELETE 
 
-app.use(express.static(path.resolve(__dirname, './public')));
-app.use(express.static(path.resolve(__dirname, './views')));
+//template engine - ejs//
+app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
 
-app.use('/', productosRoutes);   // Definición de ruta global para un enrutador particular
+app.use(express.urlencoded({extended:true}));
 
-app.use(session( {secret: "Este es mi secreto"} ));    // para definir que vas a utilizar información en sesión
+app.use(session({
+  secret: 'shh, is a secret',
+  resave:false ,
+  saveUninitialized: false,
+}));
 
-app.use(express.urlencoded({ extended: false }));   // Para especificar que vamos a transferir información por el body en peticiones 
-app.use(express.json());                                               // Para especificar que vamos a transferir información por el body en peticiones 
+// API//
+const apiRoutes = require('./src/routes/apiRouter')
+app.use('/', apiRoutes)
 
-app.use(methodOverride('_method')); // Para poder utilizar PUT o DELETE sobreescribiendo el método POST
+//Routes//
+const mainRouter = require('./src/routes/mainRouter');
+const productsRouter = require('./src/routes/productsRouter');
+const usersRouter = require('./src/routes/usersRouter');
 
+app.use("/", mainRouter); 
+app.use('/products', productsRouter);
+app.use('/user', usersRouter); 
 
-app.listen(process.env.PORT || 3000, function() { console.log("Servidor corriendo"); })  // para levantar el servidor en un puerto especifico 
+app.use(userLoggedMiddleware);
 
+const publicPath = path.resolve(__dirname, './public');
+
+app.use( express.static(publicPath));
+
+app.use(methodOverride ("_method")); //Procesamiento PUT y DELETE
+
+//ejs//
+app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
+
+//error//
+
+app.use((req, res, next) => {
+  res.status(404).render("not-found")
+});
+
+//listen//
+
+app.listen(3001, () => {
+  console.log("servidor corriendo puerto 3001");
+});
+
+// exports
+
+module.exports = app;

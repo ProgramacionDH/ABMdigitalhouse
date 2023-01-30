@@ -38,18 +38,14 @@ app.use(session({
   saveUninitialized: false,
 }));
 
-// API//
-const apiRoutes = require('./src/routes/apiRouter')
-app.use('/', apiRoutes)
+
 
 //Routes//
 const mainRouter = require('./src/routes/mainRouter');
-const productsRouter = require('./src/routes/productsRouter');
-const usersRouter = require('./src/routes/usersRouter');
+
 
 app.use("/", mainRouter); 
-app.use('/products', productsRouter);
-app.use('/user', usersRouter); 
+
 
 app.use(userLoggedMiddleware);
 

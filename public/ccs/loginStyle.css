@@ -13,14 +13,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
 
-    :root {
-     --dark-olive-green : #5a6b47;
-     --black : #000000;
-     --artichoke : #a1a48f;
-     --tan: #dabf94;
-     --cafe-noir :#3f3222;
-     --white : #ffffff;
-    } 
+:root {
+  --dark-olive-green : #fa0b2b;
+  --black : #1a085c;
+  --artichoke : #0e0d0d;
+  --tan: #a76a09;
+  --cafe-noir :#bff00e;
+  --white : #f7d7d7;
+ } 
+  
     
 .login {
   display: grid;

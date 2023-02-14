@@ -19,73 +19,76 @@
     --cafe-noir :#bff00e;
     --white : #f7d7d7;
    } 
-    
-.mainDetailProducts{
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
 
-.mainDetailProducts .product .barratop{
-    width: 100%;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    border-bottom: #5a6b47 3px solid;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-.mainDetailProducts .product .barratop p{
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
-.mainDetailProducts .product .productSpec{
-    width: 100%;
-    padding: 50px;
+.perfil {
+    background-color: #a1a48f;
+    margin-top: 15px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.mainDetailProducts .product .productSpec img{
+.perfil section{
+    margin-top: 20px;
+    margin: auto;
     width: 100%;
 }
-.mainDetailProducts .product .productSpec .productSpecInfo {
+.perfilUsuario{
+    background-color: #ffffff;
     display: grid;
-    grid-template-columns: 1fr;
-    padding: 10px;
+    grid-template-columns: 1fr 1fr;
 }
-.mainDetailProducts .product .productSpec .productSpecInfo .product-price{
-    border-bottom: #88ac60 2px solid;
-    padding: 20px;
+.perfilUsuario div{
+    padding: 25px;
+    font-family: 'Roboto', sans-serif;
 }
-.mainDetailProducts .product .productSpec .productSpecInfo p{
-    width: 75%;
-    padding: 20px;
-    text-align: justify;
+.perfilUsuario div h2{
+    font-size: 30px;
 }
-.mainDetailProducts .product .barratop button{
+.perfilUsuario div h3{
+    font-size: 15px;
+}
+.perfilUsuario div button{
     margin-top: 50px;
     padding: 20px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     background-color: var(--artichoke);
     color: var(--white);
     border: none;
-    box-shadow: 2px 2px 1px rgb(19, 18, 18);
+    box-shadow: 2px 2px 1px grey;
 }
-.mainDetailProducts .product .barratop button:active{
-    background-color: var(--dark-olive-green);
-    box-shadow: 3px 3px 2px rgb(73, 70, 70);
-    transform: translateY(2px);
+.perfilUsuario img{
+    width: 100%;
+
+}
+.adminButton a{
+    text-decoration: none;
+    color: #3f3222;
+    font-weight: bold;
+}
+
+.imagengeneralperfil {
+    width: 100%;
+}
+.imagengeneralperfil img{
+    width: 100%;
+}
+.funciones-admin a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width: 1023px){
-    .mainDetailProducts .product .barratop{
-   
+    .perfil {
         grid-template-columns: 1fr;
-       
     }
-   
+    
+  
   }
   
   @media (max-width: 767px){
-  
-  
+   
+    
+   
   }
-  

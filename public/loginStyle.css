@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+
+    :root {
+     --dark-olive-green : #5a6b47;
+     --black : #000000;
+     --artichoke : #a1a48f;
+     --tan: #dabf94;
+     --cafe-noir :#3f3222;
+     --white : #ffffff;
+    } 
+
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.login .imagen{
+  width: 100%;
+ 
+}
+
+.login .imagen img{
+  width: 100%;
+}
+
+.login .imagen .mobile{
+  display: none;
+}
+
+.login .container{
+  width: 80%;
+}
+
+.login .subtitulo {
+  color: #5a6b47;
+  padding: 20px;
+  border-bottom: #5a6b47 5px solid;
+  margin: 20px auto 10px auto;
+}
+
+.login .subtitulo h2{ 
+  text-align: left;
+}
+
+
+.login .formulario{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction : column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .formulario div{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction : column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.login .formulario label{
+  color: var(--dark-olive-green);
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.login .formulario input{
+  background-color: var(--white);
+  border: var(--dark-olive-green) 1px solid;
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: 2px 2px 1px grey;
+}
+
+.login .boton{
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--artichoke);
+  color: var(--white);
+  border: none;
+  box-shadow: 2px 2px 1px grey;
+}
+.login .boton:active{
+  background-color: var(--dark-olive-green);
+  box-shadow: 3px 3px 2px darkgrey;
+  transform: translateY(2px);
+}
+
+.login .otrasOpciones{
+  font-weight: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.login .otrasOpciones a{
+  font-weight: 20px;
+  color: #3f3222;
+  text-decoration: none;
+  margin-top: 15px;
+}
+ 
+
+@media (max-width: 1023px){
+
+}
+
+@media (max-width: 767px){
+  .login{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .login .imagen .mobile{
+    display: block;
+  }
+  .login .imagen .desktop{
+    display: none;
+  }
+
+ 
+}

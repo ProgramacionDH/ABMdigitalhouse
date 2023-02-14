@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+
+    :root {
+     --dark-olive-green : #fa0b2b;
+     --black : #1a085c;
+     --artichoke : #0e0d0d;
+     --tan: #a76a09;
+     --cafe-noir :#bff00e;
+     --white : #f7d7d7;
+    } 
+    
+.index{
+  margin-top: 0%;
+}
+.index .banners{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.index .banners img{
+  width: 100%;
+}
+.index .banners .banner .mobile{
+  display: none;
+}
+
+* {box-sizing:border-box}
+
+ @media (max-width: 1023px){
+
+}
+@media (max-width: 767px){
+  .banners .banner .desktop{
+    display: none;
+  }
+  .index .banners .banner .mobile{
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap'); 
+:root {
+    --dark-olive-green : #fa0b2b;
+    --black : #1a085c;
+    --artichoke : #0e0d0d;
+    --tan: #a76a09;
+    --cafe-noir :#bff00e;
+    --white : #f7d7d7;
+   } 
+    
+.mainDetailProducts{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.mainDetailProducts .product .barratop{
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-bottom: #5a6b47 3px solid;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+.mainDetailProducts .product .barratop p{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.mainDetailProducts .product .productSpec{
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.mainDetailProducts .product .productSpec img{
+    width: 100%;
+}
+.mainDetailProducts .product .productSpec .productSpecInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
+}
+.mainDetailProducts .product .productSpec .productSpecInfo .product-price{
+    border-bottom: #88ac60 2px solid;
+    padding: 20px;
+}
+.mainDetailProducts .product .productSpec .productSpecInfo p{
+    width: 75%;
+    padding: 20px;
+    text-align: justify;
+}
+.mainDetailProducts .product .barratop button{
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: var(--artichoke);
+    color: var(--white);
+    border: none;
+    box-shadow: 2px 2px 1px rgb(19, 18, 18);
+}
+.mainDetailProducts .product .barratop button:active{
+    background-color: var(--dark-olive-green);
+    box-shadow: 3px 3px 2px rgb(73, 70, 70);
+    transform: translateY(2px);
+}
+
+@media (max-width: 1023px){
+    .mainDetailProducts .product .barratop{
+   
+        grid-template-columns: 1fr;
+       
+    }
+   
+  }
+  
+  @media (max-width: 767px){
+  
+  
+  }
+  

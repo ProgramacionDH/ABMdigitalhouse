@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Editar productos</h1>
-    <!-- action: le indico la ruta / method: le indico que los datos viajen encriptados, por detras de la URL con el metodo POST -->
+   
     <form action="/productos/edit/<%= productoFound.id %>" method="POST">
         <input type="text" name="id" value="<%= productoFound.id %>" readonly placeholder="Colocar ID del producto">
         <br>

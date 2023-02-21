@@ -4,7 +4,7 @@ var router = express.Router();
 const productosController = require('..src/controllers/productosController.js')
 
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
   res.send('Estoy en productos');
 });
 

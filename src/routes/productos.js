@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const productosController = require('../controllers/productosController')
+const productosController = require('..src/controllers/productosController.js')
 
 
 router.get('/', function(req, res, next) {

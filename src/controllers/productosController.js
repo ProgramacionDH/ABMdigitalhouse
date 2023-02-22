@@ -6,11 +6,11 @@ const productos = JSON.parse(fs.readFileSync(__dirname + "/../../database/produc
 
 const productosController = {
     
-    create : function (req, res, next){
+    create : function (req, res){
         res.render('usuariosCrear')
     },
   
-    store : function(req, res, next){
+    store : function(req, res){
         
         productos.push(req.body);
        
@@ -21,7 +21,7 @@ const productosController = {
         res.send("Se registro el usuario " + req.body.nombre);
     },
     
-    edit: function(req,res,next){
+    edit: function(req,res){
        
         var idProductos = req.params.id;
        
@@ -42,7 +42,7 @@ const productosController = {
         }
     },
  
-    update:function(req,res,next){
+    update:function(req,res){
        
         var idProductos = req.params.id;
        

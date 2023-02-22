@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+        <!-- INCLUDES HEAD-->
+   <%- include('../partials/head') %>
+
+   <body> 
+    
+   <!-- INCLUDES HEADER-->
+   <header>
+    <!-- <div class="searchBar">
+    
+        <i class="fa-sharp fa-solid fa-magnifying-glass fa-2x"></i>
+        <input type="text" placeholder="Buscar productos, servicios, más..">
+    </div> -->
+    <div class="headingLogo">
+        <a href="/"><img src="/img/logoGHboceto.png" alt="" class="logo"><a>
+    </div>
+   
+    <nav class="nav-bar">
+        <ul class="menuPrincipal">
+            <li><a href="/products">PRODUCTOS</a></li>             
+            <li> <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a></li>
+            <li><a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a> </li>
+        </ul>
+    </nav>
+    <div class="mobile-nav-bar">
+        <a href="/products"><i class="fa-sharp fa-solid fa-bars"></i>
+        <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a>
+        <a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a>
+    </div>
+
+
+</header>
+   
+
+
+    <main class="register">
+        <section class="registerBanner">
+            <img src="/img/users/userRegister.png" alt="" class="desktop"> <!--  no encuentra ninguna imagen -->
+            <img src="/img/users/userRegisterMobile.png" alt="" class="mobile">
+
+        </section>
+
+    <section class="containerRegistro">
+
+        <div class="subtitulo">
+            <h2>REGISTRARSE</h2>
+        </div>
+
+    <div class="contenedor">  
+
+      <form action="/user/register" method="POST" enctype="multipart/form-data" class="addUserForm">
+        <div class="emailDiv">
+            <label > Correo Electrónico </label>
+            <input  type="email" name="email" placeholder="user@futureisgreen.com.ar" required>
+        </div>
+        <div class="grupos">
+            <div>
+                <label > Contraseña </label>  
+                <input  type="password" name="contrasena1" placeholder="********" required>        
+            </div>
+            <div>
+                <label > Confirmar Contraseña </label>  
+                <input type="password" name="contrasena2" placeholder="********" required>        
+            </div>
+        </div>
+        <div class="grupos">
+            <div>
+                <label > Nombre </label>
+                <input  type="text" name="nombre" placeholder="DonFumon" required>
+            </div>
+            <div>
+                <label > Apellido </label>
+                <input  type="text" name="apellido" placeholder="Acevedo" required>
+            </div>
+        </div>
+        <div class="grupos">
+            <div>
+                <label > Dirección - Linea 1 </label>
+                <input type="text" name="calle" placeholder="Aristobulo Del Valle 1455" required>
+            </div>
+            <div>
+                <label > Dirección - Linea 2 (opcional)</label>
+                <input  type="text" name="extra" placeholder="Maipu 335">
+            </div>
+        </div>
+        <div class="grupos">
+            <div>
+                <label > Ciudad </label>
+                <input  type="text" name="ciudad" placeholder="Vicente López" required>
+            </div>
+            <div>
+                <label  > Provincia </label>
+                <input  type="text" name="provincia" placeholder=" Buenos Aires" required>
+            </div>
+        </div>
+        <div class="grupos">
+            <div>
+                <label > Código Postal </label>
+                <input  type="number" name="codigoPostal" placeholder="1644" required>
+            </div>
+            <div>
+                <label >Foto de Perfil</label>
+                <input  type="file" name="filename" placeholder="avatar">
+            </div>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" name="checbox"> 
+            <label  for="checkbox"> Sí, deseo recibir información a mi correo electrónico de ofertas </label>         
+            </div>
+        <button class="botonRegistro"> REGISTRARSE </button>
+      </form>    
+      </div>
+    </section>
+ 
+
+    </main>
+
+ <!-- INCLUDES FOOTER-->
+ <%- include('../partials/footer') %>
+
+ <script src="js/validations/addUser.js"></script>
+ <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

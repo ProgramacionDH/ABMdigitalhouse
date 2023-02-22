@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- INCLUDES HEAD-->
+<%- include('../partials/head') %>
+
+<body>
+    <!-- INCLUDES HEADER-->
+    <%- include('../partials/header') %>
+    <div class ="form">
+     
+        <div class= "loginform">
+
+    <main>
+    <section class="login">
+    <section class="imagen">
+        <img src="img/users/login.png" alt="" class="desktop">
+        <img src="img/users/loginMobile.png" alt="" class="mobile">
+    </section>
+    <section class="container">
+        <div class="subtitulo">
+            <h2>INICIAR SESION</h2>
+        </div>
+    
+    <form action = "/user/login" method="POST" class="formulario" > 
+    <div>
+        <label > Correo Eléctronico </label>
+        <input  type="emailinput" name="email" class="form-control" placeholder="user@growgreen.com"><br>
+         <% if (locals.errors && errors.email) {  %>
+          <div class="text-danger">
+          <%= errors.email.msg %>    
+        </div>  
+          <% } %> 
+    </div>
+       
+    <div>
+        <label > Contraseña </label>
+        <input  type="password" name="contrasena" placeholder="*********"><br>
+    </div>
+        <button class="boton">CONFIRMAR</button>
+    <div class="otrasOpciones">
+        <p>¿No tienes cuenta?</p>
+        <a href= "/user/register" class="registrarse"  >    Registrarse  </a>
+       <!-- <input type= "submit" value="ingresar" class= "submit"> <br>  -->
+         <a href="#" class="contraseña2"> Olvide mi contraseña </a>
+    </div>
+  </form>   
+</section>
+</section>
+</main> 
+</div>
+</div>
+
+ <!-- INCLUDES FOOTER-->
+ <%- include('../partials/footer') %>
+ <script src="/js/clearStorage.js"></script>
+
+</body>
+</html>

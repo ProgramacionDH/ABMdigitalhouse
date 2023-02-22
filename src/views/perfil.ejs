@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- INCLUDES HEAD-->
+<%- include('../partials/head') %>
+
+<body> 
+
+<!-- INCLUDES HEADER-->
+<header>
+    <!-- <div class="searchBar">
+    
+        <i class="fa-sharp fa-solid fa-magnifying-glass fa-2x"></i>
+        <input type="text" placeholder="Buscar productos, servicios, más..">
+    </div> -->
+    <div class="headingLogo">
+        <a href="/"><img src="/img/logoGHboceto.png" alt="" class="logo"><a>
+    </div>
+   
+    <nav class="nav-bar">
+        <ul class="menuPrincipal">
+            <li><a href="/products">PRODUCTOS</a></li>             
+            <li> <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a></li>
+            <li><a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a> </li>
+        </ul>
+    </nav>
+    <div class="mobile-nav-bar">
+        <a href="/products"></a><i class="fa-sharp fa-solid fa-bars"></i></a>
+        <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a>
+        <a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a>
+    </div>
+
+
+</header>
+
+<main class="perfil">
+    <section class="perfilUsuario">
+        <div>
+            <h2> Hola <%=  user.name + " " + user.surname %>  </h2>
+            <h3><%= user.email %> </h3>
+            <br>
+            <br>
+           
+            <br>
+            <br>
+            <a href="/user/logout"><button>LOG OUT</button></a>
+            
+        </div>
+        <img src="/img/avatars/<%= user.profile_image %>">
+    </section>
+    <section class="imagengeneralperfil">
+        <img src="/img/userPerfil.jpeg" alt="img perfil">
+    </section>
+</main>
+
+    
+</body>
+
+ <!-- INCLUDES FOOTER-->
+ <%- include('../partials/footer') %>
+ <script src="/js/showAdmin.js"></script>
+
+</html>

@@ -1,34 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- INCLUDES HEAD-->
-<%- include('../partials/head') %>
+
 
 <body> 
 
-<!-- INCLUDES HEADER-->
-<header>
-    <!-- <div class="searchBar">
-    
-        <i class="fa-sharp fa-solid fa-magnifying-glass fa-2x"></i>
-        <input type="text" placeholder="Buscar productos, servicios, más..">
-    </div> -->
-    <div class="headingLogo">
-        <a href="/"><img src="/img/logoGHboceto.png" alt="" class="logo"><a>
-    </div>
-   
-    <nav class="nav-bar">
-        <ul class="menuPrincipal">
-            <li><a href="/products">PRODUCTOS</a></li>             
-            <li> <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a></li>
-            <li><a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a> </li>
-        </ul>
-    </nav>
-    <div class="mobile-nav-bar">
-        <a href="/products"></a><i class="fa-sharp fa-solid fa-bars"></i></a>
-        <a href="/user"><i class="fa-sharp fa-solid fa-user fa-2x"></i></a>
-        <a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping fa-2x"></i></a>
-    </div>
 
+<header>
 
 </header>
 
@@ -40,15 +17,9 @@
             <br>
             <br>
             <div id="funcionesAdmin" class="funciones-admin">
-                <a href="/products/create"> 
-                    <h4> Agregar productos </h4> 
-                </a>
-                <!-- <a href="/products/edit"> 
-                    <h4> Editar producto </h4> 
-                </a> Esto tiene q estar en cada producto. no aca-->
-                <a href="/user/estadisticas">
-                    <h4>Estadisticas</h4>
-                </a>
+                <a href="/usuarios/create"> 
+                    <h4> Agregar usuarios </h4> 
+                
 
             </div>
             <br>
@@ -66,8 +37,5 @@
     
 </body>
 
- <!-- INCLUDES FOOTER-->
- <%- include('../partials/footer') %>
- <script src="/js/showAdmin.js"></script>
 
 </html>

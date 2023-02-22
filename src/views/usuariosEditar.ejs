@@ -9,17 +9,13 @@
     <h1>Editar productos</h1>
    
     <form action="/productos/edit/<%= productoFound.id %>" method="POST">
-        <input type="text" name="id" value="<%= productoFound.id %>" readonly placeholder="Colocar ID del producto">
+        <input type="text" name="id" value="<%= productoFound.id %>" readonly placeholder="Colocar ID del usuario">
         <br>
-        <input type="text" name="nombre" value="<%= productoFound.nombre %>" placeholder="Nombre del producto">
+        <input type="text" name="nombre" value="<%= productoFound.nombre %>" placeholder="Nombre del usuario">
         <br>
-        <input type="text" name="precio" value="<%= productoFound.precio %>" placeholder="Colocar Precio">
+        <input type="text" name="mail" value="<%= productoFound.precio %>" placeholder="Colocar correo">
         <br>
-        <input type="text" name="descripcion" value="<%= productoFound.descripcion %>" placeholder="Colocar la descripcion del producto">
-        <br>
-        <input type="text" name="marca" value="<%= productoFound.marca %>" placeholder="Marca del producto">
-        <br>
-        <input type="text" name="stock" value="<%= productoFound.stock %>" placeholder="Stock disponible">
+        <input type="text" name="descripcion" value="<%= productoFound.descripcion %>" placeholder="Colocar la descripcion del usuario">
         <br>
         <button type="submit">EDITAR</button>
     </form>

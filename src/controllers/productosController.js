@@ -7,7 +7,7 @@ const productos = JSON.parse(fs.readFileSync(__dirname + "/../../database/produc
 const productosController = {
     
     create : function (req, res, next){
-        res.render('productosCrear')
+        res.render('usuariosCrear')
     },
   
     store : function(req, res, next){
@@ -35,10 +35,10 @@ const productosController = {
             }
         
         }if (productoFound) {
-            res.render("productosEditar", {productoFound});
+            res.render("usuariosEditar", {productoFound});
      
         }else{
-            res.send("Producto inexistente")
+            res.send("Usuario inexistente")
         }
     },
  

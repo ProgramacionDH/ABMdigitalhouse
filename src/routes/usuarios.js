@@ -5,7 +5,7 @@ const productosController = require('../controllers/productosController.js')
 
 
 router.get('/', function(req, res) {
-  res.send('Estoy en productos');
+  res.send('Estoy en usuarios');
 });
 
 router.get('/create', productosController.create);

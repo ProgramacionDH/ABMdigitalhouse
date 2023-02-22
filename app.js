@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/productos', productosRouter);
+app.use('/usuarios', productosRouter);
 app.use('/users', usersRouter);
 
 app.use(function(req, res, next) {

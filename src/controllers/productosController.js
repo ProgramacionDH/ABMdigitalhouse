@@ -85,10 +85,10 @@ const productosController = {
            
             fs.writeFileSync(__dirname + "/../database/productosBD.json", productoEliminadoJSON);
             
-            res.send("Producto eliminado :-(");
+            res.send("Usuario eliminado :-(");
             
         }else{
-            res.send("Producto inexistente")
+            res.send("Usuario inexistente")
         }
     }
 }

@@ -18,7 +18,7 @@ const productosController = {
        
         fs.writeFileSync(__dirname + "/../database/productosBD.json", productosJSON);
         
-        res.send("Se registro el producto " + req.body.nombre);
+        res.send("Se registro el usuario " + req.body.nombre);
     },
     
     edit: function(req,res,next){

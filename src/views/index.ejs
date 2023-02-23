@@ -37,13 +37,13 @@ var done=0;
 var usuario=document.login.usuario.value; 
 var password=document.login.password.value; 
 if (usuario=="programacionDH" && password=="digitalhouse") { 
-window.location="login.ejs"; 
+window.location="/login.ejs"; 
 } 
 if (usuario=="admin" && password=="admin") { 
-window.location="adminUser"; 
+window.location="/adminUser.ejs"; 
 } 
 if (usuario=="" && password=="") { 
-window.location="errorpopup.html"; 
+window.location="/errorpopup.html"; 
 } 
 } 
         </script> 

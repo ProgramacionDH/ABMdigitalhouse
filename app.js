@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 app.use('/usuarios', productosRouter);
 app.use('/users', usersRouter);
 
-app.use(function(req, res, next) {
+app.use((req, res,) => {
   next(createError(404));
 })
 
